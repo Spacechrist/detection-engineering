@@ -50,7 +50,7 @@ for object in mitreData['objects']:
 # Dictionary to store alert data
 alert_data = {}
 # Walking through files in a specified directory
-for root, dirs, files in os.walk(r"C:\Users\Spacechrist\Documents\GitHub\TCMDetectionEngineering\converted-detections"):
+for root, dirs, files in os.walk("detections/"):
     for file in files:
         # Checking if the file has a .toml extension
         if file.endswith(".toml"):
