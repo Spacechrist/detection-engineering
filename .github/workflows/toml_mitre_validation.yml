@@ -1,6 +1,4 @@
-# This is a basic TOML validation
-
-name: TOML Validation
+name: TOML/MITRE Validation
 
 on:
   workflow_dispatch:
