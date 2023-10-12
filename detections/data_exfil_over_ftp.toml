@@ -2,7 +2,7 @@
 creation_date = "2023/07/11"
 
 [rule]
-author = ["Anthony Isherwood"]
+author = ["Spacechrist"]
 description = "This alert looks for zip files being sent over FTP."
 from = "now-6m"
 name = "Data Exfiltration Observed via FTP"

@@ -2,7 +2,7 @@
 creation_date = "2023/07/11"
 
 [rule]
-author = ["Anthony Isherwood"]
+author = ["Spacechrist"]
 description = "This alert triggers via sysmon data on a string of text that occurs out of the box with msfvenom."
 from = "now-6m"
 name = "Potential MSF PowerShell Payload Observed"
@@ -17,7 +17,7 @@ process.command_line: "\"cmd.exe\"" and message : "*powershell -w hidden -nop -c
 [[rule.threat]]
 framework = "MITRE ATT&CK"
 [[rule.threat.technique]]
-id = "T1059"
+id = "T1046"
 name = "Command and Scripting Interpreter"
 reference = "https://attack.mitre.org/techniques/T1059/"
 [[rule.threat.technique.subtechnique]]
