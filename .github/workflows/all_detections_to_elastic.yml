@@ -1,9 +1,6 @@
 name: All Detections To Elastic
 
 on:
-  push:
-    path:
-      - '**.toml'
   workflow_dispatch:
 
 jobs:
