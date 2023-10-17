@@ -5,7 +5,7 @@ output_path = "metrics/navigator.json"
 techniques = {}
 subtechnique = {}
 
-for root, dirs, files in os.walk(for root, dirs, files in os.walk("detections/"):
+for root, dirs, files in os.walk("detections/"):
     for file in files:
         if file.endswith(".toml"):
             full_path = os.path.join(root,file)
