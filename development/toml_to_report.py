@@ -73,45 +73,69 @@ outF = open(output_path, "w")
 outF.write("# Detection Report\n")
 
 # Current Month
+outF.write("## Current Month\n")
+outF.write("### New Alerts\n")
+outF.write("| Alert | Date | Author | Risk Score | Severity |\n")
+outF.write("| --- | --- | --- | --- | --- |\n")
 for line in current.values():
+    tactic = []
+    tech = []
+    subtech = []
+
     date = line['date']
     name = line['name']
     author = str(line['author']).replace(",",";")
     risk_score = str(line['risk_score'])
     severity = line['severity']
 
-    outF.write("## Current Month\n")
-    outF.write("### New Alerts\n")
-    outF.write("| Alert | Date | Author | Risk Score | Severity |\n")
-    outF.write("| --- | --- | --- | --- | --- |\n")
+    for technique in line['mitre']:
+        tactic.append(technique['tactic'])
+        tech.append(technique['technique'])
+        subtechnique.append(technique['subtech'])
     outF.write("|" + name + "|" + date + "|" + author + "|" + risk_score + "|" + severity + "|\n")
 
 # Last Month
+outF.write("## Last Month\n")
+outF.write("### Alerts\n")
+outF.write("| Alert | Date | Author | Risk Score | Severity |\n")
+outF.write("| --- | --- | --- | --- | --- |\n")
 for line in current.values():
+    tactic = []
+    tech = []
+    subtech = []
+
     date = line['date']
     name = line['name']
     author = str(line['author']).replace(",",";")
     risk_score = str(line['risk_score'])
     severity = line['severity']
 
-    outF.write("## Last Month\n")
-    outF.write("### Alerts\n")
-    outF.write("| Alert | Date | Author | Risk Score | Severity |\n")
-    outF.write("| --- | --- | --- | --- | --- |\n")
+    for technique in line['mitre']:
+        tactic.append(technique['tactic'])
+        tech.append(technique['technique'])
+        subtechnique.append(technique['subtech'])
     outF.write("|" + name + "|" + date + "|" + author + "|" + risk_score + "|" + severity + "|\n")
 
 # Two Months
+outF.write("## Two Months Ago\n")
+outF.write("### Alerts\n")
+outF.write("| Alert | Date | Author | Risk Score | Severity |\n")
+outF.write("| --- | --- | --- | --- | --- |\n")
 for line in current.values():
+    tactic = []
+    tech = []
+    subtech = []
+
     date = line['date']
     name = line['name']
     author = str(line['author']).replace(",",";")
     risk_score = str(line['risk_score'])
     severity = line['severity']
 
-    outF.write("## Two Months Ago\n")
-    outF.write("### Alerts\n")
-    outF.write("| Alert | Date | Author | Risk Score | Severity |\n")
-    outF.write("| --- | --- | --- | --- | --- |\n")
+    for technique in line['mitre']:
+        tactic.append(technique['tactic'])
+        tech.append(technique['technique'])
+        subtechnique.append(technique['subtech'])
     outF.write("|" + name + "|" + date + "|" + author + "|" + risk_score + "|" + severity + "|\n")
 
 outF.close()
