@@ -47,4 +47,21 @@ output_path = r"C:\Users\Spacechrist\Documents\GitHub\detection-engineering\metr
 outF = open(output_path, "w")
 outF.write("name,date,author,risk_score,severity,tactic,technique,subtechnique\n")
 
+separator = "; "
+for line in list.values():
+    date = line['date']
+    name = line['name']
+    author = str(line['author']).replace(",",";")
+    risk_score = str(line['risk_score'])
+    severity = line['severity']
+
+    tactic = []
+    tech = []
+    subtech = []
+
+    for technique in line['mitre']:
+        tactic.append(technique['tactic'])
+        tech.append(technique['technique'])
+        subtech.append(technique['subtech'])
+    outF.write(name + "," + date + "," + author + "," + risk_score + "," + severity + "," + separator.join(tactic) + "," +  separator.join(tech) + "," +  separator.join(subtech) + "\n")
 outF.close()
