@@ -42,7 +42,7 @@ for root, dirs, files in os.walk(r"C:\Users\Spacechrist\Documents\GitHub\TCMDete
                     list[file] = obj
 
 
-output_path = "C:\\Users\\Spacechrist\\Documents\\GitHub\\metrics\\detectiondata.csv"
+output_path = r"C:\Users\Spacechrist\Documents\GitHub\detection-engineering\metrics\detectiondata.csv"
 
 outF = open(output_path, "w")
 outF.write("name,date,author,risk_score,severity,tactic,technique,subtechnique\n")
