@@ -1,0 +1,4 @@
+name,date,author,risk_score,severity,tactic,technique,subtechnique
+Suspicious Inter-Process Communication via Outlook,2023/09/11,['Elastic'],47,medium,Collection; Execution,T1114 - Email Collection; T1559 - Inter-Process Communication,T1114.001 - Local Email Collection; T1559.001 - Component Object Model
+PowerShell Suspicious Script with Audio Capture Capabilities,2023/08/11,['Elastic'],47,medium,Collection; Execution,T1123 - Audio Capture; T1059 - Command and Scripting Interpreter,none - none; T1059.001 - PowerShell
+PowerShell Suspicious Script with Screenshot Capabilities,2023/07/11,['Elastic'],47,medium,Collection; Execution,T1113 - Screen Capture; T1059 - Command and Scripting Interpreter,none - none; T1059.001 - PowerShell
