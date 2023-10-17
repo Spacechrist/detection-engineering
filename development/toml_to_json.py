@@ -3,7 +3,7 @@ import os
 import tomllib
 
 url = "https://6d663838c67f485c835fbd7ba96e3dc2.us-central1.gcp.cloud.es.io:9243/api/detection_engine/rules" #change this to the elastic instance address
-api_key = "R1JFUUk0c0JzRjBrODFPcHFQTUo6dXBHSEQ0VDJSai1XUFpTalF2NnF3QQ=="
+api_key = os.environ['ELASTIC_KEY']
 headers = {
     'Content-Type': 'application/json;charset=UTF-8',
     'kbn-xsrf': 'true',
@@ -12,7 +12,7 @@ headers = {
 
 data = ""
 
-for root, dirs, files in os.walk(r"C:\Users\Spacechrist\Documents\GitHub\TCMDetectionEngineering\converted-detections"):
+for root, dirs, files in os.walk("detections/"):
     for file in files:
         data = "{\n"
         if file.endswith(".toml"):
