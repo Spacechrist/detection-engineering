@@ -91,7 +91,7 @@ for line in current.values():
     for technique in line['mitre']:
         tactic.append(technique['tactic'])
         tech.append(technique['technique'])
-        subtechnique.append(technique['subtech'])
+        subtech.append(technique['subtech'])
     outF.write("|" + name + "|" + date + "|" + author + "|" + risk_score + "|" + severity + "|\n")
 
 # Last Month
