@@ -2,7 +2,7 @@
 creation_date = "2023/05/11"
 
 [rule]
-author = ["Anthony Isherwood"]
+author = ["Spacechrist"]
 description = "Using sysmon data, we're triggering on PowerShell logs where Invoke-WebRequest and .bat strings are observed."
 from = "now-6m"
 name = "PowerShell Invoke-WebRequest Downloading .BAT File"
