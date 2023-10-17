@@ -19,6 +19,13 @@ for root, dirs, files in os.walk("detections/"):
                 present_fields = []  # Initializing an empty list called 'present_fields' to store fields found in the TOML file
                 missing_fields = []  # Initializing an empty list called 'missing_fields' to store required fields that are missing
 
+                try:
+                    if alert['metadata']['creation_date']:
+                        pass
+                except:
+                    print("The metadata table does not contain a creation_date on: " + full_path)
+                    failure = 1
+
                 # Checking the type of alert rule specified in the TOML file and setting the required fields accordingly
                 if alert['rule']['type'] == "query": #Query Alert
                     required_fields = ['description','name','rule_id','risk_score','severity','type','query']
