@@ -1,7 +1,7 @@
 name: TOML/MITRE Validation
 
 on:
-  push
+  push:
   workflow_dispatch:
 
 jobs:
