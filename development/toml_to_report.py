@@ -50,20 +50,20 @@ for root, dirs, files in os.walk("detections/"):
 
                     obj = {'tactic': tactic, 'technique': technique, 'subtech': subtech, 'subtech': subtech}
                     filtered_object_array.append(obj)
-            obj = {'name': name, 'date': date, 'author': author, 'risk_score': risk_score, 'severity': severity, 'mitre': filtered_object_array}
-                    
-            year = date.split("/")[0]
-            month = date.split("/")[1]
-            date_compare = year + "-" + month
-                    
-            if date_compare == current_month:
-                current[file] = obj
-            elif date_compare == one_month_ago:
-                one_month[file] = obj
-            elif date_compare == two_months_ago:
-                two_months[file] = obj
+                obj = {'name': name, 'date': date, 'author': author, 'risk_score': risk_score, 'severity': severity, 'mitre': filtered_object_array}
+                        
+                year = date.split("/")[0]
+                month = date.split("/")[1]
+                date_compare = year + "-" + month
+                        
+                if date_compare == current_month:
+                    current[file] = obj
+                elif date_compare == one_month_ago:
+                    one_month[file] = obj
+                elif date_compare == two_months_ago:
+                    two_months[file] = obj
 
-            list[file] = obj
+                list[file] = obj
 
 
 output_path = "metrics/latestdetections.md"
