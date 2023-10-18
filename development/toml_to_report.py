@@ -99,7 +99,7 @@ outF.write("## Last Month\n")
 outF.write("### Alerts\n")
 outF.write("| Alert | Date | Author | Risk Score | Severity |\n")
 outF.write("| --- | --- | --- | --- | --- |\n")
-for line in current.values():
+for line in one_month.values():
     tactic = []
     tech = []
     subtech = []
@@ -121,7 +121,7 @@ outF.write("## Two Months Ago\n")
 outF.write("### Alerts\n")
 outF.write("| Alert | Date | Author | Risk Score | Severity |\n")
 outF.write("| --- | --- | --- | --- | --- |\n")
-for line in current.values():
+for line in two_months.values():
     tactic = []
     tech = []
     subtech = []
